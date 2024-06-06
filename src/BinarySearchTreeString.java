@@ -1,5 +1,10 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinarySearchTreeString {
     Node<String> root;
+    public int length;
 
     private boolean isStringGreaterThan(String string1, String string2) {
         return (string1.compareTo(string2) > 0);
@@ -7,6 +12,7 @@ public class BinarySearchTreeString {
 
     public void insert(Node<String> node) {
         root = insertHelper(root, node);
+        length++;
     }
 
     private Node<String> insertHelper(Node<String> root, Node<String> node) {
@@ -34,6 +40,20 @@ public class BinarySearchTreeString {
             displayHelper(root.left);
             System.out.println(root.data);
             displayHelper(root.right);
+        }
+    }
+
+    public List<String> getNodesAlphabetically() {
+        List<String> nodes = new ArrayList<String>();
+        getNodesHelper(root, nodes);
+        return nodes;
+    }
+
+    private void getNodesHelper(Node<String> root, List<String> nodes) {
+        if (root != null) {
+            getNodesHelper(root.left, nodes);
+            nodes.add(root.data);
+            getNodesHelper(root.right, nodes);
         }
     }
 
