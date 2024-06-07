@@ -22,9 +22,9 @@ public class BinarySearchTreeString {
         if (root == null) {
             root = node;
             return root;
-        } else if (!isStringGreaterThan(data, root.data)) {
+        } else if (isStringGreaterThan(root.data, data)) {
             root.left = insertHelper(root.left, node);
-        } else {
+        } else if (isStringGreaterThan(data, root.data)) {
             root.right = insertHelper(root.right, node);
         }
 
@@ -76,6 +76,7 @@ public class BinarySearchTreeString {
     public void remove(String data) {
         if (search(data)) {
             removeHelper(root, data);
+            length--;
         } else {
             System.out.println("não foi encontrado");
         }

@@ -1,4 +1,15 @@
-TODO
+# TODO
+- [] Implementar a minha propria hash table (pra não ter que usar a do java)
+- [] Leitura e escrita de arquivo txt em java
+- [] Ler o texto automaticamente a partir de um txt
+- [] Criar a lista de keywords automaticamente a partir de um txt
+- [] Criar uma classe separada IndiceRemissivo para deixar a Main mais clean
+- [] Comentar todo o codigo
+- [] Testar com outros textos
+
+
+
+# Planejamento
 1. Ler o arquivo de keywords e criar um hash composto pela keyword + um array vazio que vai ser preenchido com inteiros depois.
 2. Percorrer o texto e verificar se a palavra é uma keyword.
     obs: Pra checar se é uma keyword basta pesquisar no hash criado no primeiro passo
