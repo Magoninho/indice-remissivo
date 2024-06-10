@@ -1,5 +1,6 @@
 # TODO
 - [x] Implementar a minha propria hash table (pra não ter que usar a do java)
+- [x] Trocar o arrayList por uma linked list
 - [ ] Ler o texto automaticamente a partir de um txt
 - [ ] Criar a lista de keywords automaticamente a partir de um txt
 - [ ] Criar uma classe separada IndiceRemissivo para deixar a Main mais clean

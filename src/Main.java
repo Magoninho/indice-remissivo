@@ -17,16 +17,16 @@ public class Main {
                 """;
         BinarySearchTreeString tree = new BinarySearchTreeString();
 //        HashMap<String, ArrayList<Integer>> keywords = new HashMap();
-        TabelaHash<String, ArrayList<Integer>> keywords = new TabelaHash<>();
+        TabelaHash<String, ListaDuplamenteEncadeada> keywords = new TabelaHash<>();
         //TODO: criar essa lista automaticamente a partir de um txt
-        keywords.add("programming", new ArrayList<>());
-        keywords.add("programs", new ArrayList<>());
-        keywords.add("easy", new ArrayList<>());
-        keywords.add("by", new ArrayList<>());
-        keywords.add("human-engineered", new ArrayList<>());
-        keywords.add("and", new ArrayList<>());
-        keywords.add("be", new ArrayList<>());
-        keywords.add("to", new ArrayList<>());
+        keywords.add("programming", new ListaDuplamenteEncadeada());
+        keywords.add("programs", new ListaDuplamenteEncadeada());
+        keywords.add("easy", new ListaDuplamenteEncadeada());
+        keywords.add("by", new ListaDuplamenteEncadeada());
+        keywords.add("human-engineered", new ListaDuplamenteEncadeada());
+        keywords.add("and", new ListaDuplamenteEncadeada());
+        keywords.add("be", new ListaDuplamenteEncadeada());
+        keywords.add("to", new ListaDuplamenteEncadeada());
 
         AtomicInteger lineCounter = new AtomicInteger();
         Arrays.stream(text.split("\\r?\\n")).forEach(line -> {
@@ -36,7 +36,7 @@ public class Main {
                 // achou uma key no hash
                 if (keywords.get(word) != null) {
                     // adiciona a linha que a palavra se encontra no valor do hash na posição da key
-                    keywords.get(word).add(lineCounter.intValue() + 1);
+                    keywords.get(word).insereFinal(lineCounter.intValue() + 1);
                     tree.insert(new Node<>(word));
                 }
             }
@@ -47,15 +47,16 @@ public class Main {
 
         for (int i = 0; i < keysInOrder.size(); i++) {
             String currentKey = keysInOrder.get(i);
-            ArrayList<Integer> keylines = keywords.get(currentKey);
+            ListaDuplamenteEncadeada keylines = keywords.get(currentKey);
             StringBuilder str = new StringBuilder();
             str.append(currentKey).append(" ");
 
-            for (int j = 0; j < keylines.size(); j++) {
-                str.append(keylines.get(j));
-                if (j + 1 != keylines.size())
-                    str.append(" ");
-            }
+            str.append(keylines.getInlineList());
+//            for (int j = 0; j < keylines.size(); j++) {
+//                str.append(keylines.get(j));
+//                if (j + 1 != keylines.size())
+//                    str.append(" ");
+//            }
             System.out.println(str);
         }
     }
