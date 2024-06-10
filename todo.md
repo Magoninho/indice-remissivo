@@ -1,11 +1,11 @@
 # TODO
-- [] Implementar a minha propria hash table (pra não ter que usar a do java)
-- [] Leitura e escrita de arquivo txt em java
-- [] Ler o texto automaticamente a partir de um txt
-- [] Criar a lista de keywords automaticamente a partir de um txt
-- [] Criar uma classe separada IndiceRemissivo para deixar a Main mais clean
-- [] Comentar todo o codigo
-- [] Testar com outros textos
+- [x] Implementar a minha propria hash table (pra não ter que usar a do java)
+- [ ] Ler o texto automaticamente a partir de um txt
+- [ ] Criar a lista de keywords automaticamente a partir de um txt
+- [ ] Criar uma classe separada IndiceRemissivo para deixar a Main mais clean
+- [ ] Comentar todo o codigo
+- [ ] Testar com outros textos
+- [ ] Adicionar um readme bonitinho
 
 
 

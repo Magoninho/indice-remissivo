@@ -1,3 +1,5 @@
+import HashTable.TabelaHash;
+
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -14,18 +16,17 @@ public class Main {
                 by the use of good programming practices
                 """;
         BinarySearchTreeString tree = new BinarySearchTreeString();
-        // TODO: implementar a minha propria hash table
-        HashMap<String, ArrayList<Integer>> keywords = new HashMap();
-
+//        HashMap<String, ArrayList<Integer>> keywords = new HashMap();
+        TabelaHash<String, ArrayList<Integer>> keywords = new TabelaHash<>();
         //TODO: criar essa lista automaticamente a partir de um txt
-        keywords.put("programming", new ArrayList<>());
-        keywords.put("programs", new ArrayList<>());
-        keywords.put("easy", new ArrayList<>());
-        keywords.put("by", new ArrayList<>());
-        keywords.put("human-engineered", new ArrayList<>());
-        keywords.put("and", new ArrayList<>());
-        keywords.put("be", new ArrayList<>());
-        keywords.put("to", new ArrayList<>());
+        keywords.add("programming", new ArrayList<>());
+        keywords.add("programs", new ArrayList<>());
+        keywords.add("easy", new ArrayList<>());
+        keywords.add("by", new ArrayList<>());
+        keywords.add("human-engineered", new ArrayList<>());
+        keywords.add("and", new ArrayList<>());
+        keywords.add("be", new ArrayList<>());
+        keywords.add("to", new ArrayList<>());
 
         AtomicInteger lineCounter = new AtomicInteger();
         Arrays.stream(text.split("\\r?\\n")).forEach(line -> {
