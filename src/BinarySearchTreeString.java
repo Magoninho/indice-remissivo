@@ -6,10 +6,22 @@ public class BinarySearchTreeString {
     Node<String> root;
     public int length;
 
+    /**
+     * Esse método serve para comparar se uma string é maior que a outra em ordem alfabética
+     * Ex: A > B: False
+     *     B > A: True (pois está mais a frente no alfabeto)
+     * @param string1 Primeira string a ser comparada
+     * @param string2 Segunda string a ser comparada
+     * @return Se a primeira string é maior que a segunda
+     */
     private boolean isStringGreaterThan(String string1, String string2) {
         return (string1.compareTo(string2) > 0);
     }
 
+    /**
+     * Esse método insere um valor na árvore
+     * @param node Nó do tipo String para ser inserido
+     */
     public void insert(Node<String> node) {
         root = insertHelper(root, node);
         length++;
@@ -31,6 +43,9 @@ public class BinarySearchTreeString {
         return root;
     }
 
+    /**
+     * Esse método imprime a lista Em Ordem
+     */
     public void display() {
         displayHelper(root);
     }
@@ -43,6 +58,10 @@ public class BinarySearchTreeString {
         }
     }
 
+    /**
+     * Esse método retorna uma lista com os valores da árvore ordenados alfabeticamente
+     * @return Uma lista com os valores da árvore ordenados alfabeticamente
+     */
     public List<String> getNodesAlphabetically() {
         List<String> nodes = new ArrayList<String>();
         getNodesHelper(root, nodes);
@@ -57,6 +76,11 @@ public class BinarySearchTreeString {
         }
     }
 
+    /**
+     * Verifica se algum dado está presente na árvore
+     * @param data Dado a ser procurado
+     * @return Se o dado está presente
+     */
     public boolean search(String data) {
         return searchHelper(root, data);
     }
@@ -73,6 +97,10 @@ public class BinarySearchTreeString {
         }
     }
 
+    /**
+     * Remove algum dado da árvore
+     * @param data Dado a ser removido
+     */
     public void remove(String data) {
         if (search(data)) {
             removeHelper(root, data);
