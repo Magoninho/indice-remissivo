@@ -5,7 +5,6 @@ public class HashNode<K, V> {
     V value;
     final int hashCode;
 
-    // Reference to next node
     HashNode<K, V> next;
 
     public HashNode(K key, V value, int hashCode) {

@@ -93,7 +93,6 @@ public class IndiceRemissivo {
 
     private void print() {
         List<String> keysInOrder = tree.getNodesAlphabetically();
-        Path filePath = Paths.get("src/resources/output.txt");
 
         for (int i = 0; i < keysInOrder.size(); i++) {
             String currentKey = keysInOrder.get(i);

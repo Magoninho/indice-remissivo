@@ -46,3 +46,5 @@ programs 3
 to 3 4
 ```
 
+# Referências
+- [Geeks for Geeks: Implementing our own hash table with separate chaining in java](https://www.geeksforgeeks.org/implementing-our-own-hash-table-with-separate-chaining-in-java/)
