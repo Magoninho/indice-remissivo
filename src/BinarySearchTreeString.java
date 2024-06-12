@@ -15,7 +15,7 @@ public class BinarySearchTreeString {
      * @return Se a primeira string é maior que a segunda
      */
     private boolean isStringGreaterThan(String string1, String string2) {
-        return (string1.compareTo(string2) > 0);
+        return (string1.toLowerCase().compareTo(string2.toLowerCase()) > 0);
     }
 
     /**
